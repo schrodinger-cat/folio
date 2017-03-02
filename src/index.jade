@@ -1,0 +1,158 @@
+//- index.jade
+extends ./templates/head.jade
+
+block title
+	title Ivan summary
+
+block content
+	script(type="x-template")#modal
+		.popup
+			.popup__body
+				router-link(to="/").popup__close
+				.popup__name {{work.work_name}}
+				img(:src="'media/img/thumb/' + work.thumb", alt="").popup__thumb
+				.popup__description {{work.description}}
+				.popup__wrap
+					a(v-for="image in work.images", v-if="image.length != 0", :href="'media/img/fullsize/' + image", target="_blank")
+						img.popup__image(:src="'media/img/fullsize/' + image", alt="")
+
+	.header
+		.header__title Ivan Sitnikov
+			.header__specialization frontend-developer
+
+	.wrapper.about
+		.about__num 01 |
+		.about__text
+			.about__title About
+			p Hi, my name is Ivan. I am 29 years old. I live and work in Volgograd.
+			p In 2009 I graduated from the  Volgograd National Technical University, in the Russia and got a degree Specialist in Software Engineering.
+			p Since 2005, i'm practice the web development. Until this moment i have a great background only with russian customers, but now i want to work for you. 
+			p In the work i always concentrate on your needs and deadline.
+
+	.skills
+		.wrapper
+			.skills__num 02 |
+			.skills__text
+				.skills__title Skills
+				.skills__elem.skill-elem
+					.skill-elem__title CSS:
+					ul
+						li Pure css
+						li Preprocessors:
+							ul
+								li SASS / SCSS
+								li LESS
+								li Stylus
+						li 
+							a(href="https://en.bem.info/", target="_blank") BEM
+							|  for naming
+						li Animations
+				
+				.skills__elem.skill-elem
+					.skill-elem__title HTML:
+					ul
+						li Pure HTML
+						li Preprocessors:
+							ul
+								li Jade
+								li Blade
+						li Bootstrap
+
+				.skills__elem.skill-elem 
+					.skill-elem__title JavaScript:
+					ul
+						li Pure JavaScript
+						li Library:
+							ul
+								li jQuery
+								li TweenMax
+						li npm
+						li Gulp
+						li Grunt
+				
+				.skills__elem.skill-elem
+					.skill-elem__title Other skills:
+					ul
+						li PHP:
+							ul 
+								li Laravel:
+									ul 
+										li Blade
+										li Elloquent
+										li Routing
+										li Queues
+										li Migrations
+						li SQL
+						li JSON
+						li XML
+						li SVG
+				
+				.skills__elem.skill-elem
+					.skill-elem__title Environment:
+					ul
+						li
+							a(href="https://github.com/schrodinger-cat/SchrodingerCatBox", target="_blank") Build system
+							|  based on Gulp:
+							ul
+								li gulp-sass
+								li gulp-autoprefixer
+								li gulp-jade
+								li gulp-imagemin
+								li gulp-postcss
+						li Sublime text
+						li Photoshop
+						li Avocode / Zeplin
+						li SourceTree
+
+				.skills__elem.skill-elem
+					.skill-elem__title Communication:
+					ul
+						li Slack
+						li Skype
+						li Hangouts
+						li 
+							a(href="https://t.me/Schrodingercat", target="_blank") Telegram
+				
+				.skills__elem.skill-elem
+					.skill-elem__title Version controll:
+					ul
+						li
+							a(href="https://github.com/schrodinger-cat", target="_blank") Github
+						li
+							a(href="https://bitbucket.org/schrodinger-cat/", target="_blank") BitBucket
+
+	.works
+		.wrapper
+			.works__num 03 |
+			.works__text
+				.works__title Works
+		.works__wrap
+			router-view
+			router-link.works-elem(v-for="item in items", :to="item.url")
+				.works-elem__name {{item.work_name}}
+				.works-elem__year {{item.year}}
+				a(v-if="item.link" , :href="item.link", target="_blank").works-elem__link Link
+				.works-elem__type {{item.type}}
+				.works-elem__thumb(v-bind:style="{ backgroundImage: 'url(media/img/thumb/' + item.thumb + ')' }")
+		.works__disclamer And over 60 works. Will be added soon
+
+	.contacts
+		.wrapper
+			.contacts__num 04 |
+			.contacts__text
+				.contacts__title Contacts
+				p 
+					b Social: 
+					a(href="https://vk.com/schrodingercatisnotdead", target="_blank") VK
+					|  |  
+					a(href="https://www.facebook.com/schrodingercatisnotdead", target="_blank") Facebook
+					|  |  
+					a(href="https://www.upwork.com/o/profiles/users/_~0109fe155d414572ee/", target="_blank") Upwork
+					|  |  
+					a(href="https://t.me/Schrodingercat", target="_blank") Telegram
+					|  |  Skype: schrodingercatisnotdead
+				p 
+					b Git: 
+					a(href="https://github.com/schrodinger-cat", target="_blank") Github
+					|  |  
+					a(href="https://bitbucket.org/schrodinger-cat/", target="_blank") BitBucket

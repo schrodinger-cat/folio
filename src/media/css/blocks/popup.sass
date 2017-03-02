@@ -1,0 +1,63 @@
+body + .popup
+	overflow-y: hidden
+
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, 0.7)
+	z-index: 10
+	overflow-y: scroll
+	&__body
+		position: relative
+		width: 90%
+		top: 20px
+		margin-bottom: 20px
+		left: 50%
+		transform: translate(-50%, 0)
+		padding: 20px
+		background-color: #fff
+	&__close
+		position: absolute
+		right: 20px
+		width: 40px
+		height: 40px
+		transition: transform .5s
+		&:before, &:after
+			content: ''
+			top: 17px
+			left: 5px
+			position: absolute
+			width: 30px
+			height: 5px
+			background-color: #dadada
+		&:before
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+		&:hover
+			transform: rotate(178deg)
+	&__name
+		margin-bottom: 40px
+		font-size: 60px
+		+font-oswald
+	&__thumb
+		float: left
+		margin-right: 20px
+		width: 300px
+	&__description
+		overflow: hidden
+		+font-roboto
+	&__wrap
+		width: 100%
+		padding-top: 40px
+		clear: both
+		text-align: center
+	&__image
+		display: inline-block
+		vertical-align: top
+		margin: 10px
+		width: 45%
+		box-shadow: 0 0 5px 2px rgba(0,0,0,0.2)

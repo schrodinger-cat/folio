@@ -1,0 +1,70 @@
+.works
+	background-color: #e9ecef
+	padding: 70px 0
+	&__num
+		float: left
+		font-size: 60px
+		+font-oswald
+	&__text
+		padding-left: 20px
+		overflow: hidden
+		font-size: 20px
+		+font-roboto
+	&__title
+		font-size: 60px
+		+font-oswald
+	&__wrap
+		margin-top: 40px
+	&__disclamer
+		padding-top: 70px 
+		text-align: center
+		+font-roboto
+
+.works-elem
+	width: 25%
+	height: 300px
+	position: relative
+	display: inline-block
+	vertical-align: top
+	color: #fff
+	cursor: pointer
+	+font-roboto
+	+box
+	&__name
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 30px
+		font-weight: bold
+		text-shadow: 0 0 5px #000
+		text-align: center
+		z-index: 2
+	&__year
+		position: absolute
+		top: 10px
+		right: 10px
+		text-shadow: 0 0 3px #000
+		z-index: 2
+	&__link
+		position: absolute
+		left: 10px
+		bottom: 10px
+		text-shadow: 0 0 5px #000
+		z-index: 2
+	&__type
+		position: absolute
+		right: 10px
+		bottom: 10px
+		text-shadow: 0 0 5px #000
+		z-index: 2
+	&__thumb
+		position: absolute
+		width: 100%
+		height: 100%
+		z-index: 1
+		background-repeat: no-repeat
+		+cover
+
+a.works-elem__link, a.works-elem
+	color: #fff
