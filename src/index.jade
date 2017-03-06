@@ -2,7 +2,7 @@
 extends ./templates/head.jade
 
 block title
-	title Ivan summary
+	title ★
 
 block content
 	script(type="x-template")#modal
@@ -34,91 +34,84 @@ block content
 			.skills__num 02 |
 			.skills__text
 				.skills__title Skills
+
 				.skills__elem.skill-elem
-					.skill-elem__title CSS:
-					ul
-						li Pure css
-						li Preprocessors:
-							ul
-								li SASS / SCSS
-								li LESS
-								li Stylus
-						li 
+					.skill-elem__header._css
+						.skill-elem__title CSS:
+						.skill-elem__icon-wrap
+							img.skill-elem__icon(src="media/img/css.png", alt="")
+					.skill-elem__text
+						.skill-elem__skill — Pure css
+						.skill-elem__skill — Preprocessors: SASS / SCSS, LESS
+						.skill-elem__skill — 
 							a(href="https://en.bem.info/", target="_blank") BEM
 							|  for naming
-						li Animations
+						.skill-elem__skill — Animations
+						.skill-elem__skill — Mixins
 				
 				.skills__elem.skill-elem
-					.skill-elem__title HTML:
-					ul
-						li Pure HTML
-						li Preprocessors:
-							ul
-								li Jade
-								li Blade
-						li Bootstrap
+					.skill-elem__header._html
+						.skill-elem__title HTML:
+						.skill-elem__icon-wrap
+							img.skill-elem__icon(src="media/img/html.png", alt="")
+					.skill-elem__text
+						.skill-elem__skill — Pure HTML
+						.skill-elem__skill — Preprocessors: Jade, Blade
+						.skill-elem__skill — Bootstrap
 
 				.skills__elem.skill-elem 
-					.skill-elem__title JavaScript:
-					ul
-						li Pure JavaScript
-						li Library:
-							ul
-								li jQuery
-								li TweenMax
-						li npm
-						li Gulp
-						li Grunt
+					.skill-elem__header._js
+						.skill-elem__title JavaScript:
+						.skill-elem__icon-wrap
+							img.skill-elem__icon(src="media/img/javascript.png", alt="")
+					.skill-elem__text
+						.skill-elem__skill — Pure JavaScript
+						.skill-elem__skill — Library: jQuery, TweenMax
+						.skill-elem__skill — npm
+						.skill-elem__skill — Gulp
+						.skill-elem__skill — Grunt
 				
 				.skills__elem.skill-elem
-					.skill-elem__title Other skills:
-					ul
-						li PHP:
-							ul 
-								li Laravel:
-									ul 
-										li Blade
-										li Elloquent
-										li Routing
-										li Queues
-										li Migrations
-						li SQL
-						li JSON
-						li XML
-						li SVG
+					.skill-elem__header._other
+						.skill-elem__title Other skills:
+						.skill-elem__icon-wrap
+							img.skill-elem__icon(src="media/img/php.png", alt="")
+					.skill-elem__text
+						.skill-elem__skill — PHP
+						.skill-elem__skill — Laravel: Blade, Elloquent, Routing, Queues, Migrations
+						.skill-elem__skill — SQL
+						.skill-elem__skill — JSON
+						.skill-elem__skill — XML
+						.skill-elem__skill — SVG
 				
 				.skills__elem.skill-elem
-					.skill-elem__title Environment:
-					ul
-						li
+					.skill-elem__header._environment
+						.skill-elem__title Environment:
+						.skill-elem__icon-wrap
+							img.skill-elem__icon(src="media/img/web-development.png", alt="")
+					.skill-elem__text
+						.skill-elem__skill — 
 							a(href="https://github.com/schrodinger-cat/SchrodingerCatBox", target="_blank") Build system
-							|  based on Gulp:
-							ul
-								li gulp-sass
-								li gulp-autoprefixer
-								li gulp-jade
-								li gulp-imagemin
-								li gulp-postcss
-						li Sublime text
-						li Photoshop
-						li Avocode / Zeplin
-						li SourceTree
+							|  based on Gulp: gulp-sass, gulp-autoprefixer, gulp-jade, gulp-imagemin, gulp-postcss
+						.skill-elem__skill — Sublime text
+						.skill-elem__skill — Photoshop
+						.skill-elem__skill — Avocode / Zeplin
+						.skill-elem__skill — SourceTree
 
 				.skills__elem.skill-elem
-					.skill-elem__title Communication:
-					ul
-						li Slack
-						li Skype
-						li Hangouts
-						li 
+					.skill-elem__header._communication
+						.skill-elem__title Communication:
+						.skill-elem__icon-wrap
+							img.skill-elem__icon(src="media/img/communication.png", alt="")
+					.skill-elem__text
+						.skill-elem__skill — Slack
+						.skill-elem__skill — Skype
+						.skill-elem__skill — Hangouts
+						.skill-elem__skill — 
 							a(href="https://t.me/Schrodingercat", target="_blank") Telegram
-				
-				.skills__elem.skill-elem
-					.skill-elem__title Version controll:
-					ul
-						li
+						.skill-elem__skill — 
 							a(href="https://github.com/schrodinger-cat", target="_blank") Github
-						li
+						.skill-elem__skill — 
 							a(href="https://bitbucket.org/schrodinger-cat/", target="_blank") BitBucket
 
 	.works

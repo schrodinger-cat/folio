@@ -1,4 +1,4 @@
-var apiURL = 'http://summary.dv/tools/get-all-works';
+var apiURL = 'http://schrodingercat.ru/tools/get-all-works';
 
 const Work = Vue.component('modal', {
 	template: '#modal',
@@ -22,7 +22,7 @@ const Work = Vue.component('modal', {
 	methods: {
 		fetchData() {
 			var self = this;
-			var apiURL = 'http://summary.dv/tools/get-work/'+this.$route.params.url;
+			var apiURL = 'http://schrodingercat.ru/tools/get-work/'+this.$route.params.url;
 
 			$.get( apiURL, function( data ) {
 				parseData = $.parseJSON(data);

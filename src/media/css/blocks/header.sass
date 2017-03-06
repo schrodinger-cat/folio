@@ -1,15 +1,29 @@
 .header
-	height: 600px
-	background-color: #495057
+	height: 300px
+	background: #495057 url('../img/header.jpg') no-repeat center
+	position: relative
+	+cover
 	&__title
 		position: absolute
-		top: 40%
+		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
 		text-align: center
 		color: #fff
-		font-size: 80px
+		font-size: 32px
 		+font-oswald
 	&__specialization
-		margin-left: 15px
-		font-size: 30px
+		font-size: 20px
+	+min-screen(768px)
+		height: 400px
+		&__title
+			font-size: 60px
+		&__specialization
+			font-size: 20px
+	+min-screen(1000px)
+		height: 600px
+		&__title
+			font-size: 80px
+		&__specialization
+			margin-left: 15px
+			font-size: 30px

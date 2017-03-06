@@ -1,24 +1,104 @@
 .skills
 	background-color: #f1f3f5
-	padding: 70px 0
+	padding: 70px 10px
 	&__num
 		float: left
-		font-size: 60px
+		font-size: 30px
 		+font-oswald
 	&__text
 		padding-left: 20px
+		padding-bottom: 10px
 		overflow: hidden
-		font-size: 20px
+		font-size: 12px
 		+font-roboto
 	&__title
-		font-size: 60px
+		font-size: 30px
 		+font-oswald
 	&__elem
-		padding: 20px 0
-		display: inline-block
-		vertical-align: top
-		width: 33%
+	+min-screen(768px)
+		&__num
+			font-size: 40px
+		&__title
+			font-size: 40px
+		&__text
+			font-size: 20px
+	+min-screen(1000px)
+		padding: 70px 0
+		&__num
+			font-size: 60px
+		&__title
+			font-size: 60px
 
 .skill-elem
+	display: inline-block
+	vertical-align: top
+	width: 90%
+	//height: 300px
+	margin: 20px 10px 0 0
+	background-color: #FFF
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+	overflow: hidden
+	+box
+	+br(4px)
+	&__header
+		position: relative
+		height: 90px
+		border-bottom: 1px solid #dadada
+		margin-bottom: 35px
+		box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3)
+		&._css
+			background: url('../img/header-css.jpg') no-repeat center center
+			+cover
+		&._html
+			background: url('../img/header-html.jpg') no-repeat center center
+			+cover
+		&._js
+			background: url('../img/header-js.jpg') no-repeat center center
+			+cover
+		&._other
+			background: url('../img/header-other.jpg') no-repeat center center
+			+cover
+		&._environment
+			background: url('../img/header-environment.jpg') no-repeat center center
+			+cover
+		&._communication
+			background: url('../img/header-communication.jpg') no-repeat center center
+			+cover
+		&._git
+			background: url('../img/header-git.jpg') no-repeat center center
+			+cover
 	&__title
+		position: absolute
+		right: 10px
+		top: 5px
 		font-weight: bold
+		color: #fff
+	&__icon-wrap
+		position: absolute
+		width: 50px
+		height: 50px
+		bottom: -27px
+		left: 10px
+		border: 3px solid #dadada
+		background-color: #fff
+		+br(50%)
+	&__icon
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 30px
+	&__text
+		font-size: 16px
+		padding: 10px
+		+font-roboto
+	&__skill
+		margin-bottom: 5px
+	&__subskill
+		margin-left: 15px
+		margin-bottom: 3px
+	+min-screen(768px)
+		width: 45%
+		height: 300px
+	+min-screen(1000px)
+		width: 30%
