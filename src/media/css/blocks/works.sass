@@ -44,6 +44,9 @@
 	cursor: pointer
 	+font-roboto
 	+box
+	&:hover 
+		.works-elem__thumb
+			filter: grayscale(0%)
 	&__name
 		position: absolute
 		top: 50%
@@ -81,6 +84,8 @@
 		z-index: 1
 		background-repeat: no-repeat
 		background-position: center
+		filter: grayscale(100%)
+		transition: filter 0.7s
 		+cover
 	+min-screen(768px)
 		width: 33%
