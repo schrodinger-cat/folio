@@ -46,7 +46,7 @@
 	+box
 	&:hover 
 		.works-elem__thumb
-			filter: grayscale(0%)
+			filter: blur(0) grayscale(0%)
 	&__name
 		position: absolute
 		top: 50%
@@ -54,7 +54,8 @@
 		transform: translate(-50%, -50%)
 		font-size: 16px
 		font-weight: bold
-		text-shadow: 0 0 5px #000
+		color: #fff
+		text-shadow: 0 0 7px #000
 		text-align: center
 		z-index: 2
 	&__year
@@ -84,7 +85,7 @@
 		z-index: 1
 		background-repeat: no-repeat
 		background-position: center
-		filter: grayscale(100%)
+		filter: blur(1px) grayscale(100%) 
 		transition: filter 0.7s
 		+cover
 	+min-screen(768px)
